@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "personal_infos",
+  "info": {
+    "name": "personalInfo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "biography": {
+      "type": "text"
+    },
+    "homePageInfo": {
+      "type": "richtext"
+    }
+  }
+}
